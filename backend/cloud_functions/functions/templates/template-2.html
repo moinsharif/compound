@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incidence</title>
+</head>
+
+<style>
+    html,
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: normal;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: visible;
+    }
+
+    @page {
+        size: letter;
+    }
+
+    .header {
+        padding: 0 0.5rem 0.5rem 0.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0;
+        text-align: center;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .table__header {
+        width: 20%;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .text-normal {
+        font-size: 1rem;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    .text-small {
+        font-size: 0.875rem;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    ul {
+        margin: 0;
+        padding-left: 1.5rem;
+        list-style-type: "\2014\a0";
+    }
+
+    .signature {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .footer {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .text--red {
+        color: red;
+    }
+
+    .text--underline {
+        text-decoration: underline;
+    }
+
+    .mx-2 {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .mb-2 {
+        margin-bottom: 0.5rem;
+    }
+
+    .mb-4 {
+        margin-bottom: 1rem;
+    }
+
+    .border-b-2 {
+        border-bottom: 2px solid black;
+    }
+
+    .h-4 {
+        height: 1rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text {
+        font-size: 1rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .highlight-gray {
+        background-color: gray;
+    }
+
+    .logo {
+        width:  21.0cm;
+        height: 12.0cm;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .subtitle-header {
+        font-size: 1.5rem;
+        justify-content: center;
+        text-align: center;
+        margin: 5px 0px;
+    }
+
+    .images {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    .images-container {
+        display: -webkit-box;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .image-container {
+        text-align: center;
+        width: calc((100% / 2) - 2rem);
+        margin: 1rem;
+    }
+
+    .image-header {
+        margin: 0.2rem;
+        height: 360px;
+        object-fit: fill;
+    }
+
+    .image {
+        margin: 0.2rem;
+        height: 380px;
+        object-fit: fill;
+        width: calc((100% / 2) - 2rem);
+    }
+
+    .imageW {
+        margin: 0.2rem;
+        height: 350px;
+        object-fit: fill;
+        width: calc((100% / 2) - 2rem);
+    }
+    .mb-4-header {
+        margin-bottom: 4rem;
+    }
+</style>
+
+<body>
+    {{#each incidence}}
+    {{#if this.header}}
+    <div class="container">
+        <img
+                class="logo mb-4-header center"
+                src={{imgHeader}}
+                alt="logo">
+                <h2 class="subtitle-header">Daily Report {{this.headerDate}}</h2>
+                <h2 class="subtitle-header">Property Name: {{this.propertyName}}</h2>
+                <h2 class="subtitle-header">{{this.propertyAddress}}</h2>
+    </div>
+
+    <div class="images-container">
+        <div class="image-container">
+            <p class="text">Check-In Image</p>
+            <img
+                    class="image-header"
+                    src="{{imgCheckIn}}"
+                    alt="img1">
+        </div>
+        <div class="image-container">
+            <p class="text">Check-Out Image</p>
+            <img
+                    class="image-header"
+                    src="{{imgCheckOut}}"
+                    alt="img2">
+        </div>
+    </div>
+    {{/if}}
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="mb-4">
+                        <h2 class="subtitle text--underline">Observation Information:</h2>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="table__header">
+                                        <p class="text-normal">Property Name:</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-normal">{{this.propertyName}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__header">
+                                        <p class="text-normal">Service Date:</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-normal">{{this.serviceDate}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__header">
+                                        <p class="text-normal">Unit #:</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-normal">{{this.unitNumber}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__header">
+                                        <p class="text-normal">Time of observation:</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-normal">{{this.serviceTime}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__header">
+                                        <p class="text-normal">Observation:</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-normal">{{this.typeOfViolation}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__header">
+                                        <p class="text-normal">Description:</p>
+                                    </td>
+                                    <td>
+                                        <div class="table__header">
+                                            <p class="text-normal">{{this.comments}}</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2 class="subtitle text--underline">Images:</h2>
+                    <div class="images">
+                        <img class="image" src={{this.images0}} alt="photo1">
+                        <img class="image" src={{this.images1}} alt="photo2">
+                        <img class="image" src={{this.images2}} alt="photo3">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="page-break-after:auto">&nbsp;</div>
+    {{#each this.watchlist}}
+    <table class="w-full">
+        <tbody>
+            <tr>
+                <td>
+                    <div class="mb-4">
+                        {{#if this.header}}
+                        <h2 class="subtitle text--underline">Watchlist Information:</h2>
+                        {{/if}}
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="table__header">
+                                        <p class="text-normal">Property Name:</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-normal">{{this.propertyName}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__header">
+                                        <p class="text-normal">Service Date:</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-normal">{{this.serviceDate}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__header">
+                                        <p class="text-normal">Time of observation:</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-normal">{{this.serviceTime}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table__header">
+                                        <p class="text-normal">Unit #:</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-normal">{{this.unit}}</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2 class="subtitle text--underline">Image:</h2>
+                    <div class="images">
+                        <img class="imageW" src="{{this.image}}" alt="photo1">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    {{/each}}
+    {{/each}}
+</body>
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 2</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+firebase deploy
+firebase --debug deploy
+
+firebase emulators:start
+firebase functions:shell
+
+
+curl -X POST  "http://localhost:5001/collegeapp-1d9c2/us-central1/sendMail" -H "Content-Type:application/json"  -d "{\"dest\":\"pedro.beldomenico@mavha.com\", \"firstName\":\"Pedro Beldomenico\", \"code\":\"111234\"}"
+
+
+firebase deploy --only firestore:indexes
+firebase deploy --only functions
+firebase deploy --only firestore:rules
+
+if functions deploy fails:
+gcloud functions logs read

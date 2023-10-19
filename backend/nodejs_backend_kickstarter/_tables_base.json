@@ -1,0 +1,130 @@
+{
+    "properties":[{ "id":"same that id generate",
+                    "propertyName": "IL Villagio Condominiums",
+                    "address": "11696 Raven Rd",
+                    "lat": 36.8977107390993, 
+                    "lng": -94.24610227321152,
+                    "marketId": "id del market",
+                    "marketName": "Granby MO",
+                    "units":"221",
+                    "phone": "1234567891",
+                    "totalViolations": "1",
+                    "specialInstructions":"some instruction",
+                    "flagged": true
+                  },
+                  { "id":"same that id generate",
+                    "propertyName": "38420 Cardinal Ln #31, Selbyville, DE",
+                    "address": "Cardinal Ln #31",
+                    "lat": 38.46972737988007, 
+                    "lng": -75.0855691308497,
+                    "marketId": "id del market",
+                    "marketName": "Granby MO",
+                    "units":"227",
+                    "phone": "1234567891",
+                    "totalViolations": "1",
+                    "specialInstructions":"some instruction",
+                    "flagged": false
+                  },
+                  { "id":"same that id generate",
+                    "propertyName": "71-B Bullard Pasture Rd, Wendell, MA",
+                    "address": "Bullard Pasture Rd",
+                    "lat": 42.53603667396351, 
+                    "lng": -72.41510023075998,
+                    "marketName": "Wendell, MA",
+                    "marketId": "id del market",
+                    "units":"228",
+                    "phone": "1234567891",
+                    "totalViolations": "1",
+                    "specialInstructions":"some instruction",
+                    "flagged": false
+                  },
+                  { "id":"same that id generate",
+                    "propertyName": "156 Southwind Cir, Greeneville, TN",
+                    "address": "Southwind Cir",
+                    "lat": 36.09941602627395, 
+                    "lng":  -82.86234223089771,
+                    "marketName": "Greeneville, TN",
+                    "marketId": "id del market",
+                    "units":"213",
+                    "phone": "1234567891",
+                    "totalViolations": "1",
+                    "specialInstructions":"some instruction",
+                    "flagged": false
+                  }],
+    "markets":[{"name":"Jacksonville", "state": "FL"},
+               {"name":"Naples", "state": "FL"},
+               {"name":"Tampa", "state": "FL"}],
+    "employees":[{
+        "legend": "",
+        "markers": [
+            "470a2770-a19c-11eb-83d7-d98b2294b925",
+            "47309b30-a19c-11eb-83d7-d98b2294b925",
+            "47564ba0-a19c-11eb-83d7-d98b2294b925"
+        ],
+        "properties": [
+            "a742e000-a19c-11eb-8376-676b7b581950",
+            "a7d02be0-a19c-11eb-8376-676b7b581950"
+        ]
+    }],
+    "payrolls": [
+        {
+            
+        }
+    ],
+    "timesheet":[
+        {
+            "employeId": "",
+            "employeeName": "John",
+            "checkInId": "",
+            "dateCheckIn": "date in",
+            "dateCheckOut": "date out",
+            "Status": "in progress"
+        }
+    ],
+    "check_ins": [{
+        "id": "same that id generate",
+        "marketId":"id del market",
+        "marketName":"Granby MO",
+        "propertyId": "",
+        "propertyName": "name",
+        "units": "",
+        "employeedId":"",
+        "employeedName":"",
+        "image": "",
+        "dateCheckIn": "date in",
+        "dateCheckOut": "date out"
+    }],
+    "violations":[{
+        "id":"same that id generate",
+        "checkInId": "",
+        "createdAt": "",
+        "violationType":"",
+        "description":"",
+        "images":["","",""]
+    }],
+    "type_violations": [
+        {
+            "id":"same that id generate",
+            "name": "Untied Bag"
+        },
+        {
+            "id":"same that id generate",
+            "name": "More than 25 lbs."
+        },
+        {
+            "id":"same that id generate",
+            "name": "Loose trash"
+        }
+    ],
+    "activity_log":[
+        {
+         "id":"same that id generate",
+         "description": "Edited property A",
+         "editedBy": "",
+         "createdAt": "",
+         "porterId": "",
+         "propertyId": "",
+         "adminId": ""
+        }
+    ]
+}

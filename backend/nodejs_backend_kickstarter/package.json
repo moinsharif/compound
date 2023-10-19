@@ -1,0 +1,19 @@
+{
+  "name": "firebase_kickstarter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "execution",
+  "scripts": {
+    "start": "npm run execution",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase-tools": "^8.6.0",
+    "firestore-export-import": "^0.6.0"
+  },
+  "devDependencies": {
+    "node-geocoder": "^3.27.0"
+  }
+}

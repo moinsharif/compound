@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "176307159135",
+    "project_id": "trash-app-a3696",
+    "storage_bucket": "trash-app-a3696.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176307159135:android:52516635eb060dea5c9bea",
+        "android_client_info": {
+          "package_name": "com.org.trashmanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "176307159135-sfapf1r1vu5ufat3dkikek6766h3ukuo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4mjX6g84OLSEvAmgkGaBBFGk3mdGxTsA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "176307159135-sfapf1r1vu5ufat3dkikek6766h3ukuo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "176307159135-80n376evc7v1fg17qt31hmfj2gs4n4fn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.org.trashmanagement"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176307159135:android:3cfc41970c9179ec5c9bea",
+        "android_client_info": {
+          "package_name": "com.org.trashmanagment.hd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "176307159135-sfapf1r1vu5ufat3dkikek6766h3ukuo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4mjX6g84OLSEvAmgkGaBBFGk3mdGxTsA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "176307159135-sfapf1r1vu5ufat3dkikek6766h3ukuo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "176307159135-80n376evc7v1fg17qt31hmfj2gs4n4fn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.org.trashmanagement"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

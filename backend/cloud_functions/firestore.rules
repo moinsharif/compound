@@ -1,0 +1,147 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    
+    function isSignedIn(){
+ 			return request.auth != null;
+	  } 
+
+    match /users/{id} {
+      allow get:  if isSignedIn();
+      allow list:  if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+      allow create: if isSignedIn();
+	  }
+    
+    match /type_violations/{id} {
+      allow get:  if isSignedIn();
+      allow list:  if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+      allow create: if isSignedIn();
+	  }
+    
+    match /activity_log/{id} {
+      allow get:  if isSignedIn();
+      allow list:  if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+      allow create: if isSignedIn();
+	  }
+    
+    match /employees/{id} {
+      allow get:  if isSignedIn();
+      allow list:  if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+      allow create: if isSignedIn();
+	  }
+    
+    match /issues/{id} {
+      allow get:  if isSignedIn();
+      allow list:  if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+      allow create: if isSignedIn();
+	  }
+    
+    match /logs/{id} {
+      allow get:  if isSignedIn();
+      allow list:  if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+      allow create: if isSignedIn();
+	  }
+    
+    match /markets/{id} {
+      allow get:  if isSignedIn();
+      allow list:  if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+      allow create: if isSignedIn();
+	  }
+    
+    match /{path=**}/messages/{id} {
+      allow get:  if isSignedIn();
+      allow list:  if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+      allow create: if isSignedIn();
+	  }
+    
+    match /{path=**}/messages_history/{id} {
+      allow get:  if isSignedIn();
+      allow list:  if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+      allow create: if isSignedIn();
+	  }
+   
+    match /payroll/{id} {
+      allow get:  if isSignedIn();
+      allow list:  if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+      allow create: if isSignedIn();
+	  }
+    
+    match /properties/{id} {
+      allow get:  if isSignedIn();
+      allow list:  if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+      allow create: if isSignedIn();
+	  }
+    
+    match /roles/{id} {
+      allow get:  if isSignedIn();
+      allow list:  if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+      allow create: if isSignedIn();
+	  }
+    
+    match /config/{id} {
+      allow get:  if isSignedIn();
+      allow list:  if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+      allow create: if isSignedIn();
+	  }
+
+    match /checkIns/{id} {
+      allow get:  if isSignedIn();
+      allow list:  if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+      allow create: if isSignedIn() && request.resource.data['app_version'] != null;
+    }
+
+    match /violations/{id} {
+      allow get:  if isSignedIn();
+      allow list:  if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+      allow create: if isSignedIn() && request.resource.data['app_version'] != null;
+    }
+
+    match /watchlist/{id} {
+      allow get:  if isSignedIn();
+      allow list:  if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+      allow create: if isSignedIn() && request.resource.data['app_version'] != null;
+    }
+
+    match /timesheet/{id} {
+      allow get:  if isSignedIn();
+      allow list:  if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+      allow create: if isSignedIn() && request.resource.data['app_version'] != null;
+    }
+  }
+  
+}

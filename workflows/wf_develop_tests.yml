@@ -1,0 +1,44 @@
+name:  CollegeApp Test Runner
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+
+   prepare:
+    runs-on: ubuntu-latest
+    #sequence of tasks called
+    steps:
+      - uses: actions/checkout@v1
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '1.17'
+          channel: 'beta'
+      - run: flutter pub get
+      - run: flutter analyze
+        
+   drive_android:
+    runs-on: ubuntu-latest
+    #creates a build matrix for your jobs
+    strategy:
+      #set of different configurations of the virtual environment.
+      matrix:
+        api-level: [21, 29]
+        target: [default]
+    needs: prepare
+    steps:
+      - uses: actions/checkout@v1
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '1.17'
+          channel: 'beta'
+      - name: Run Flutter Driver tests
+        uses: reactivecircus/android-emulator-runner@v1
+        with:
+          api-level: ${{ matrix.api-level }}
+          target: ${{ matrix.target }}
+          arch: x86_64
+          profile: Nexus 6
+          script: flutter drive --target=test/widget_test.dart
+          

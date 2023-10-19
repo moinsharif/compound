@@ -1,0 +1,1 @@
+curl http://localhost:8080 --header "Content-Type: application/json" --request POST -d "{\"violationsIds\":[\"1630335457836\",\"1630343533186\",\"1630355249643\",\"1630957713434\",\"1630958364153\"]}"
